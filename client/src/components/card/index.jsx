@@ -13,13 +13,13 @@ const CharacterCard = ({ character }) => {
   }, [])
 
   return (
-    <article className="w-[400px] h-[180px]  border bg-white/2 backdrop-blur-sm rounded-md flex text-white">
-      <div className="w-1/3 h-full">
+    <article className="w-[500px] h-[250px]  border bg-white/2 backdrop-blur-sm rounded-md flex text-white">
+      <div className="w-2/5 h-full">
         <img src={image} className="w-full h-full object-cover" />
       </div>
-      <div className="w-2/3 h-full flex flex-col gap-1 p-2">
+      <div className="w-3/5 h-full flex flex-col gap-1 p-3">
         <div className="w-full flex flex-col">
-          <h2 className="font-bold text-[1rem] overflow-hidden cursor-pointer hover:text-orange-400">{name}</h2>
+          <h2 className="font-bold text-[1.2rem] overflow-hidden cursor-pointer hover:text-orange-400">{name}</h2>
           <p className="flex items-center overflow-hidden">
             <span
               className={`inline-block w-[8px] h-[8px] rounded-full ${

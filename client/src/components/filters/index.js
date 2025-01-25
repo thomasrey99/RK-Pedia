@@ -44,12 +44,12 @@ const Filters = () => {
             name="text"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
-            className="w-full max-w-[220px] h-[34px] text-[0.7rem] text-[#9e9e9e] p-[12px] rounded-[12px] bg-transparent border border-white outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] hover:border-2 hover:shadow-[0px_0px_20px_-17px] active:scale-95 focus:border-2 focus:border-white focus:text-white"
+            className="w-full h-[42px] text-[1rem] text-[#9e9e9e] p-[12px] rounded-[12px] bg-transparent border border-white outline-none transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] hover:border-2 hover:shadow-[0px_0px_20px_-17px] active:scale-95 focus:border-2 focus:border-white focus:text-white"
           />
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-white">Status</label>
-          <div className="relative flex flex-wrap rounded-md bg-transparent border border-white text-white box-border shadow-[0_0_0px_1px_rgba(0,0,0,0.06)] max-w-[220px] h-[35px] text-[14px]">
+          <div className="relative flex flex-wrap rounded-md bg-transparent border border-white text-white box-border shadow-[0_0_0px_1px_rgba(0,0,0,0.06)] max-w-full h-[42px] text-[14px]">
             {["Alive", "Dead", "Unknown"].map((statusOption) => (
               <label key={statusOption} className="flex-1 text-center">
                 <input
@@ -60,7 +60,7 @@ const Filters = () => {
                   checked={status === statusOption}
                   className="hidden peer"
                 />
-                <span className="flex cursor-pointer text-[0.7rem] items-center justify-center rounded-md border-none py-2 px-2 text-white transition-all duration-150 ease-in-out peer-checked:bg-white peer-checked:font-semibold peer-checked:text-black">
+                <span className="flex cursor-pointer text-[1rem] items-center justify-center rounded-md border-none py-2 px-2 text-white transition-all duration-150 ease-in-out peer-checked:bg-white peer-checked:font-semibold peer-checked:text-black">
                   {statusOption}
                 </span>
               </label>
@@ -69,7 +69,7 @@ const Filters = () => {
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-white">Gender</label>
-          <div className="relative flex flex-wrap rounded-md bg-transparent border border-white text-white box-border shadow-[0_0_0px_1px_rgba(0,0,0,0.06)] max-w-[220px] h-[34px] text-[14px]">
+          <div className="relative flex flex-wrap rounded-md bg-transparent border border-white text-white box-border shadow-[0_0_0px_1px_rgba(0,0,0,0.06)] w-full h-[42px] text-[14px]">
             {["Male", "Female"].map((genderOption) => (
               <label key={genderOption} className="flex-1 text-center">
                 <input
@@ -80,7 +80,7 @@ const Filters = () => {
                   checked={gender === genderOption}
                   className="hidden peer"
                 />
-                <span className="flex cursor-pointer text-[0.7rem] items-center justify-center rounded-md border-none py-2 px-2 text-white transition-all duration-150 ease-in-out peer-checked:bg-white peer-checked:font-semibold peer-checked:text-black">
+                <span className="flex cursor-pointer text-[1rem] items-center justify-center rounded-md border-none py-2 px-2 text-white transition-all duration-150 ease-in-out peer-checked:bg-white peer-checked:font-semibold peer-checked:text-black">
                   {genderOption}
                 </span>
               </label>
@@ -93,7 +93,7 @@ const Filters = () => {
               href={`/characters?${buildQuery()}`}
               onClick={handleSearchClick}
             >
-              <span className="w-full font-semibold text-center  rounded-md text-[0.8rem] py-2 px-4 bg-green-300 block transition-all duration-300 ease-in-out hover:bg-green-400">
+              <span className="w-full font-semibold flex items-center justify-center  rounded-md text-[1rem] h-[42px] px-4 bg-green-300 transition-all duration-300 ease-in-out hover:bg-green-400">
                 Search
               </span>
             </Link>
