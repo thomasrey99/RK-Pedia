@@ -2,18 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: url("/rk.jpg") no-repeat center center fixed;
-  background-size: cover;
+*{
+  box-sizing: border-box;
+  overflow-x:hidden
+}
+/* Estilo general de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 5px; /* Ancho de la barra vertical */
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Aquí puedes cambiar el color y la opacidad */
-  pointer-events: none; /* Esto asegura que los clics pasen por debajo del filtro */
+/* Estilo del riel (track) donde se desplaza la barra */
+::-webkit-scrollbar-track {
+  background: transparent; /* Color del fondo */
+  border-radius: 10px;  /* Bordes redondeados */
+}
+
+/* Estilo del "pulgar" de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background: white; /* Color del pulgar */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+
+body {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+    url("/1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "rubik";
 }
